@@ -124,19 +124,21 @@ void test_race_conditions(set_controller_t c) {
 
 	#pragma omp parallel 
 	{
-		//insert all even numbers from 1-2000
+		//insert values from 0-49
 		#pragma omp for 
-		for (int i = 0; i < 2000; i+=2) {
+		for (int i = 0; i < 50; i++) {
 			c.insert(test_set, i);
 		}
 		
 		#pragma omp barrier
 
-		//insert all odd numbers while simultaneously removing the evens
+		//for 2000 operations either insert, remove, or lookup keys in the range of 0-49 repeatedly
+		// the goal is to try to modify or lookup the same key simultaneously
 		#pragma omp for
-		for (int i = 0; i < 2000; i++) {
-			if (i%2 == 0) c.remove(test_set, i);
-			else c.insert(test_set, i);
+		for (int i = 0; i < 10000; i++) {
+			if (i%3 == 0) c.remove(test_set, i % 50);
+			else if (i%3 == 1) c.insert(test_set, i % 50);
+			else if (i%3 == 2) c.contains(test_set, i % 50);
 		}
 		
 		#pragma omp barrier
@@ -144,7 +146,7 @@ void test_race_conditions(set_controller_t c) {
 		#pragma omp single 
 		{
 			// c.print(test_set);
-			if (!verify_set_integrity(c, test_set, 1000)) {
+			if (!verify_set_integrity(c, test_set, 50)) {
 				test_passed = false;
 			}
 		}
