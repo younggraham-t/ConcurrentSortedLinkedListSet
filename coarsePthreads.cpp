@@ -94,11 +94,6 @@ int coarse_pth_contains(set_t *s, int key) {
 *
 */
 int coarse_pth_insert(set_t *s, int key) {
-
-	if (coarse_pth_contains(s, key)) {
-		return 0;
-	} 
-
 	pthread_mutex_lock(&s->lock);
 	Node* newNode = node_create(key);
 
@@ -132,11 +127,16 @@ int coarse_pth_insert(set_t *s, int key) {
 	while(curr != NULL) {
 		// std::cout << "prev:" << prev->key << std::endl;
 		// std::cout << "curr:" << curr->key << std::endl;
-		if (curr->key >= newNode->key) {
+		if (curr->key > newNode->key) {
 			newNode->next = curr;
 			prev->next = newNode;
 			pthread_mutex_unlock(&s->lock);
 			return 1;
+		}
+		else if (curr->key == newNode->key) {
+			pthread_mutex_unlock(&s->lock);
+			return 0;
+
 		}
 
 		prev = curr;
@@ -150,9 +150,6 @@ int coarse_pth_insert(set_t *s, int key) {
 
 
 int coarse_pth_remove(set_t *s, int key) {
-	if (!coarse_pth_contains(s, key)) return 0;
-	
-
 	pthread_mutex_lock(&s->lock);
 	// key is at head 
 	if (s->head->key == key) {
