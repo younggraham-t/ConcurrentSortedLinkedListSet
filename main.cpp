@@ -6,6 +6,8 @@
 #include <string_view>
 #include <chrono>
 
+static unsigned int BASE_SEED = 42;
+
 struct Options {
 	int numThreads;
 	int operations;
@@ -22,11 +24,13 @@ struct Options {
 				  << ", remove: " << o.remove
 				  << ", contains: " << o.contains
 				  << ", range: " << o.range
-				  << ", implemtation: " << o.impl
+				  << ", implemtation: " << to_string(o.impl)
 				  << "}";
     }
 };
 
+
+void run_workload(set_controller_t controller, Options opts, unsigned int base_seed);
 
 
 int main(int argc, char* argv[]) {
@@ -167,46 +171,57 @@ int main(int argc, char* argv[]) {
 	std::cout << opts << std::endl;
 	
 	set_controller_t controller = get_set_controller(opts.impl);
+
+	run_workload(controller, opts, BASE_SEED);
 	
+	return 0;
+}
+
+
+void run_workload(set_controller_t controller, Options opts, unsigned int base_seed) {
 	set_t* my_set = controller.create();
-
-	float insert_perc = opts.insert / 100.0;
-	float remove_perc = opts.remove / 100.0;
-	float contains_perc = opts.contains / 100.0;
-
-	int insert_ops = opts.operations * insert_perc;
-	int remove_ops = opts.operations * remove_perc;
-	int contains_ops = opts.operations * contains_perc;
 
 	omp_set_num_threads(opts.numThreads);
 	double before = omp_get_wtime();
 
 	if (opts.impl == NON_CONC) {
-		for (int i = 0; i <= insert_ops; i++) {
-			controller.insert(my_set, i);
-		}
-		for (int i = 0; i <= contains_ops; i++) {
-			controller.contains(my_set, i);
-		}
-		for (int i = 0; i <= remove_ops; i++) {
-			controller.remove(my_set, i);
+		unsigned int private_seed = base_seed + 1;
+		for (int i = 0; i <= opts.operations; i++) {
+			int op = rand_r(&private_seed) % 100;
+			int key = (rand_r(&private_seed) % opts.range) + 1;
+
+
+			if (op < opts.insert) {
+				controller.insert(my_set, key);
+			}
+			else if (op < opts.insert + opts.remove) {
+				controller.remove(my_set, key);
+			}
+			else {
+				controller.contains(my_set, key);
+			}
 		}
 		
 	}
 	else {
 		#pragma omp parallel 
 		{
+			unsigned int private_seed = base_seed + omp_get_thread_num();
 			#pragma omp for 
-			for (int i = 0; i <= insert_ops; i++) {
-				controller.insert(my_set, i);
-			}
-			#pragma omp for 
-			for (int i = 0; i <= contains_ops; i++) {
-				controller.contains(my_set, i);
-			}
-			#pragma omp for 
-			for (int i = 0; i <= remove_ops; i++) {
-				controller.remove(my_set, i);
+			for (int i = 0; i <= opts.operations; i++) {
+				int op = rand_r(&private_seed) % 100;
+				int key = (rand_r(&private_seed) % opts.range) + 1;
+
+
+				if (op < opts.insert) {
+					controller.insert(my_set, key);
+				}
+				else if (op < opts.insert + opts.remove) {
+					controller.remove(my_set, key);
+				}
+				else {
+					controller.contains(my_set, key);
+				}
 			}
 			
 		}
@@ -219,6 +234,4 @@ int main(int argc, char* argv[]) {
 
 	controller.destroy(my_set);
 	free(my_set);
-	return 0;
 }
-
