@@ -1,8 +1,6 @@
 
 #ifndef SORTED_LINKED_LIST_SET_H
 #define SORTED_LINKED_LIST_SET_H
-
-
 #include <string_view>
 
 struct set;
