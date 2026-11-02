@@ -27,6 +27,7 @@ constexpr std::string_view to_string(ImplType t) {
 		case ImplType::COARSE_PTH: return "coarse_pth";
 		case ImplType::FINE_OMP:  return "fine_omp";
 		case ImplType::COARSE_OMP: return "coarse_omp";
+		case ImplType::NON_CONC: return "non_concurrent";
         default:           return "Unknown";
     }
 }
