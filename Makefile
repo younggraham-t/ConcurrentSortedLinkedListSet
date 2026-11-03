@@ -16,8 +16,10 @@ SRCS = main.cpp \
 	   nonConcSet.cpp \
 	   coarsePthreads.cpp \
 	   finePThreads.cpp \
+	   coarseOmp.cpp \
+	   fineOmp.cpp \
 	   setController.cpp \
-	   tests.cpp
+	   tests.cpp 
 
 OBJS = $(patsubst %.cpp, $(BUILD_DIR)/%.o, $(SRCS))
 
@@ -46,9 +48,9 @@ run: $(TARGET)
 		--insert $(INSERT) --remove $(REMOVE) --contains $(CONTAINS) \
 		--range $(RANGE) --impl $(IMPL)
 
-# Runs the full assignment matrix (C.1, C.2, C.3) across implementations
+# Runs the full assignment matrix across implementations
 sweep: $(TARGET)
-	@for impl in pthread_coarse pthread_fine omp_coarse omp_fine; do \
+	@for impl in coarse_pth fine_pth coarse_omp fine_omp; do \
 		for range in 100 1000 10000 100000; do \
 			for threads in 1 2 4 8 16 32; do \
 				./$(TARGET) --threads $$threads --ops $(OPS) --insert 5 --remove 5 --contains 90 --range $$range --impl $$impl; \

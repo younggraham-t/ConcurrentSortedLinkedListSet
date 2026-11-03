@@ -4,7 +4,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <string_view>
-#include <chrono>
+#include <iomanip>
 
 static unsigned int BASE_SEED = 42;
 
@@ -18,16 +18,24 @@ struct Options {
 	ImplType impl;
 	
 	friend std::ostream& operator<<(std::ostream& os, const Options& o) {
-		return os << "Options{numThreads: " << o.numThreads
-				  << ", operations: " << o.operations
-				  << ", insert: " << o.insert
-				  << ", remove: " << o.remove
-				  << ", contains: " << o.contains
-				  << ", range: " << o.range
-				  << ", implemtation: " << to_string(o.impl)
-				  << "}";
+		os << std::left << "Options{threads: ";
+		os << std::setw(4)  << o.numThreads
+           << "operations: " << std::setw(10) << o.operations
+           << "ins: "        << std::setw(4)  << o.insert
+           << "rem: "        << std::setw(4)  << o.remove
+           << "cont: "       << std::setw(4)  << o.contains
+           << "range: "      << std::setw(10)  << o.range
+           << "impl: "       << std::setw(10) << to_string(o.impl)
+           << "}";
+        return os;
     }
 };
+
+std::string to_string(const Options& o) {
+    std::ostringstream os;
+    os << o; // Leverages your existing operator<<
+    return os.str();
+}
 
 
 void run_workload(set_controller_t controller, Options opts, unsigned int base_seed);
@@ -131,6 +139,8 @@ int main(int argc, char* argv[]) {
 				if (impl == "non_conc") opts.impl = NON_CONC;
 				else if (impl == "fine_pth") opts.impl = FINE_PTH;
 				else if (impl == "coarse_pth") opts.impl = COARSE_PTH;
+				else if (impl == "coarse_omp") opts.impl = COARSE_OMP;
+				else if (impl == "fine_omp") opts.impl = FINE_OMP;
 
 			} 
 			else {
@@ -159,6 +169,8 @@ int main(int argc, char* argv[]) {
 		else if (arg == "--test") {
 			run_test_suite(ImplType::COARSE_PTH);
 			run_test_suite(ImplType::FINE_PTH);
+			run_test_suite(ImplType::COARSE_OMP);
+			run_test_suite(ImplType::FINE_OMP);
 			return 0;
 		}
 
@@ -168,7 +180,6 @@ int main(int argc, char* argv[]) {
 		return 1;
 	}
 
-	std::cout << opts << std::endl;
 	
 	set_controller_t controller = get_set_controller(opts.impl);
 
@@ -230,7 +241,8 @@ void run_workload(set_controller_t controller, Options opts, unsigned int base_s
 
 	double after = omp_get_wtime();
 	
-    std::cout << "Time Elapsed (ms): " << (after - before) * 1000.0 << "\n";
+	
+    std::cout << std::left << std::setw(110) << to_string(opts) << std::right << "Time Elapsed (ms): " << (after - before) * 1000.0 << "\n";
 
 	controller.destroy(my_set);
 	free(my_set);

@@ -6,7 +6,9 @@
 #include "set.h"
 
 /**
- * Non-Thread Safe Sorted Linked List Set
+ * Thread Safe Sorted Linked List Set
+ *
+ * Fine Grained implementation using pthreads
  *
  * @author Graham Young
  *
@@ -202,14 +204,14 @@ void fine_pth_print(set_t *s) {
 }
 
 
-node_snapshot_t fine__pth_get_head_snapshot(set_t* s) {
+node_snapshot_t fine_pth_get_head_snapshot(set_t* s) {
 	//since we use a dummy node we are treating head->next as the "head" for testing purposes
     if (!s || !s->head->next) return {0, nullptr};
     if (!s->head->next->next) return {s->head->next->key, nullptr};
     return {s->head->next->key, (void*)s->head->next->next};
 }
 
-node_snapshot_t fine__pth_get_node_snapshot(void* node_ptr) {
+node_snapshot_t fine_pth_get_node_snapshot(void* node_ptr) {
     Node* n = (Node*)node_ptr;
     if (!n || !n->next) return {n->key, nullptr};
     return {n->key, (void*)n->next};
