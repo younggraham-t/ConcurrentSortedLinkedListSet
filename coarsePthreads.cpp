@@ -5,7 +5,9 @@
 #include "set.h"
 
 /**
- * Non-Thread Safe Sorted Linked List Set
+ * Thread Safe Sorted Linked List Set
+ *
+ * Coarse Grained implementation using pthreads
  *
  * @author Graham Young
  *
@@ -151,10 +153,16 @@ int coarse_pth_insert(set_t *s, int key) {
 
 int coarse_pth_remove(set_t *s, int key) {
 	pthread_mutex_lock(&s->lock);
+	if (s->head == NULL) {
+		pthread_mutex_unlock(&s->lock);
+		return 0;
+	}
 	// key is at head 
 	if (s->head->key == key) {
 		if (s->head->next != NULL) {
+			Node* old = s->head;
 			s->head = s->head->next;
+			free(old);
 
 		}
 		else {
@@ -179,7 +187,7 @@ int coarse_pth_remove(set_t *s, int key) {
 
 	}
 	pthread_mutex_unlock(&s->lock);
-	return 1;
+	return 0;
 }
 
 
@@ -193,13 +201,13 @@ void coarse_pth_print(set_t *s) {
 	std::cout << std::endl;
 }
 
-node_snapshot_t coarse__pth_get_head_snapshot(set_t* s) {
+node_snapshot_t coarse_pth_get_head_snapshot(set_t* s) {
     if (!s || !s->head) return {0, nullptr};
     if (!s->head->next) return {s->head->key, nullptr};
     return {s->head->key, (void*)s->head->next};
 }
 
-node_snapshot_t coarse__pth_get_node_snapshot(void* node_ptr) {
+node_snapshot_t coarse_pth_get_node_snapshot(void* node_ptr) {
     Node* n = (Node*)node_ptr;
     if (!n || !n->next) return {n->key, nullptr};
     return {n->key, (void*)n->next};

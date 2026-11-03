@@ -2,7 +2,7 @@
 #include <iostream>
 
 
-// non concurent
+// Non-concurrent
 set_t* set_create();
 void set_init(set_t *s);
 int set_insert(set_t *s, int key);
@@ -11,26 +11,57 @@ int set_contains(set_t *s, int key);
 void set_destroy(set_t *s);
 void set_print(set_t *s);
 
-// coarse pthreads
+// Coarse Pthreads
 set_t* coarse_pth_create();
-void coarse_pth_init(set_t *s);
 int coarse_pth_insert(set_t *s, int key);
 int coarse_pth_remove(set_t *s, int key);
 int coarse_pth_contains(set_t *s, int key);
 void coarse_pth_destroy(set_t *s);
 void coarse_pth_print(set_t *s);
-node_snapshot_t coarse__pth_get_head_snapshot(set_t* s);
-node_snapshot_t coarse__pth_get_node_snapshot(void* node_ptr);
+node_snapshot_t coarse_pth_get_head_snapshot(set_t* s);
+node_snapshot_t coarse_pth_get_node_snapshot(void* node_ptr);
 
+// Fine Pthreads
 set_t* fine_pth_create();
-void fine_pth_init(set_t *s);
 int fine_pth_insert(set_t *s, int key);
 int fine_pth_remove(set_t *s, int key);
 int fine_pth_contains(set_t *s, int key);
 void fine_pth_destroy(set_t *s);
 void fine_pth_print(set_t *s);
-node_snapshot_t fine__pth_get_head_snapshot(set_t* s);
-node_snapshot_t fine__pth_get_node_snapshot(void* node_ptr);
+node_snapshot_t fine_pth_get_head_snapshot(set_t* s);
+node_snapshot_t fine_pth_get_node_snapshot(void* node_ptr);
+
+// Coarse OMP
+set_t* coarse_omp_create();
+int coarse_omp_insert(set_t *s, int key);
+int coarse_omp_remove(set_t *s, int key);
+int coarse_omp_contains(set_t *s, int key);
+void coarse_omp_destroy(set_t *s);
+void coarse_omp_print(set_t *s);
+node_snapshot_t coarse_omp_get_head_snapshot(set_t* s);
+node_snapshot_t coarse_omp_get_node_snapshot(void* node_ptr);
+
+
+// Fine Pthreads
+set_t* fine_omp_create();
+int fine_omp_insert(set_t *s, int key);
+int fine_omp_remove(set_t *s, int key);
+int fine_omp_contains(set_t *s, int key);
+void fine_omp_destroy(set_t *s);
+void fine_omp_print(set_t *s);
+node_snapshot_t fine_omp_get_head_snapshot(set_t* s);
+node_snapshot_t fine_omp_get_node_snapshot(void* node_ptr);
+
+#define ASSIGN_CONTROLLER_FUNCTIONS(prefix) \
+    controller.create           = prefix##_create; \
+    controller.insert           = prefix##_insert; \
+    controller.remove           = prefix##_remove; \
+    controller.contains         = prefix##_contains; \
+    controller.destroy          = prefix##_destroy; \
+    controller.print            = prefix##_print; \
+    controller.get_head_snapshot = prefix##_get_head_snapshot; \
+    controller.get_node_snapshot = prefix##_get_node_snapshot;
+
 
 set_controller_t get_set_controller(ImplType impl) {
 	set_controller_t controller;
@@ -45,29 +76,26 @@ set_controller_t get_set_controller(ImplType impl) {
 			controller.print = set_print;
 			break;
 		case COARSE_PTH:
-			controller.create = coarse_pth_create;
-			controller.insert = coarse_pth_insert;
-			controller.remove = coarse_pth_remove;
-			controller.contains = coarse_pth_contains;
-			controller.destroy = coarse_pth_destroy;
-			controller.print = coarse_pth_print;
-			controller.get_head_snapshot = coarse__pth_get_head_snapshot;
-			controller.get_node_snapshot = coarse__pth_get_node_snapshot;
+			ASSIGN_CONTROLLER_FUNCTIONS(coarse_pth);
 			break;
 		case FINE_PTH:
-			controller.create = fine_pth_create;
-			controller.insert = fine_pth_insert;
-			controller.remove = fine_pth_remove;
-			controller.contains = fine_pth_contains;
-			controller.destroy = fine_pth_destroy;
-			controller.print = fine_pth_print;
-			controller.get_head_snapshot = fine__pth_get_head_snapshot;
-			controller.get_node_snapshot = fine__pth_get_node_snapshot;
+			ASSIGN_CONTROLLER_FUNCTIONS(fine_pth);
+			break;
+		case COARSE_OMP:
+			ASSIGN_CONTROLLER_FUNCTIONS(coarse_omp);
+			break;
+		case FINE_OMP:
+			ASSIGN_CONTROLLER_FUNCTIONS(fine_omp);
 			break;
 			
 	}
 	return controller;
 }
+
+
+
+#undef ASSIGN_CONTROLLER_FUNCTIONS
+
 
 int verify_set_integrity(set_controller_t c, set_t* s, int expected_max_count) {
     int actual_count = 0;
