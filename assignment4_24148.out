@@ -1,0 +1,301 @@
+=== Job info ===
+Tue Nov  3 02:28:02 PM EST 2026
+User: gyoung22
+Running on: gal-c3.charlotte.edu
+SLURM_JOB_ID: 24148
+Workdir: /users/gyoung22/assignment4
+
+=== Modules ===
+
+=== Run ===
+Options{threads: 1   operations: 100000    ins: 5   rem: 5   cont: 90  range: 100       impl: coarse_pth}     Time Elapsed (ms): 6.21548
+Options{threads: 1   operations: 100000    ins: 25  rem: 25  cont: 50  range: 100       impl: coarse_pth}     Time Elapsed (ms): 7.33447
+Options{threads: 1   operations: 100000    ins: 45  rem: 45  cont: 10  range: 100       impl: coarse_pth}     Time Elapsed (ms): 7.69362
+Options{threads: 2   operations: 100000    ins: 5   rem: 5   cont: 90  range: 100       impl: coarse_pth}     Time Elapsed (ms): 23.2696
+Options{threads: 2   operations: 100000    ins: 25  rem: 25  cont: 50  range: 100       impl: coarse_pth}     Time Elapsed (ms): 22.4892
+Options{threads: 2   operations: 100000    ins: 45  rem: 45  cont: 10  range: 100       impl: coarse_pth}     Time Elapsed (ms): 23.3619
+Options{threads: 4   operations: 100000    ins: 5   rem: 5   cont: 90  range: 100       impl: coarse_pth}     Time Elapsed (ms): 48.5535
+Options{threads: 4   operations: 100000    ins: 25  rem: 25  cont: 50  range: 100       impl: coarse_pth}     Time Elapsed (ms): 74.9476
+Options{threads: 4   operations: 100000    ins: 45  rem: 45  cont: 10  range: 100       impl: coarse_pth}     Time Elapsed (ms): 88.501
+Options{threads: 8   operations: 100000    ins: 5   rem: 5   cont: 90  range: 100       impl: coarse_pth}     Time Elapsed (ms): 54.632
+Options{threads: 8   operations: 100000    ins: 25  rem: 25  cont: 50  range: 100       impl: coarse_pth}     Time Elapsed (ms): 97.6866
+Options{threads: 8   operations: 100000    ins: 45  rem: 45  cont: 10  range: 100       impl: coarse_pth}     Time Elapsed (ms): 121.515
+Options{threads: 16  operations: 100000    ins: 5   rem: 5   cont: 90  range: 100       impl: coarse_pth}     Time Elapsed (ms): 74.8575
+Options{threads: 16  operations: 100000    ins: 25  rem: 25  cont: 50  range: 100       impl: coarse_pth}     Time Elapsed (ms): 114.453
+Options{threads: 16  operations: 100000    ins: 45  rem: 45  cont: 10  range: 100       impl: coarse_pth}     Time Elapsed (ms): 138.891
+Options{threads: 32  operations: 100000    ins: 5   rem: 5   cont: 90  range: 100       impl: coarse_pth}     Time Elapsed (ms): 114.257
+Options{threads: 32  operations: 100000    ins: 25  rem: 25  cont: 50  range: 100       impl: coarse_pth}     Time Elapsed (ms): 150.996
+Options{threads: 32  operations: 100000    ins: 45  rem: 45  cont: 10  range: 100       impl: coarse_pth}     Time Elapsed (ms): 165.561
+Options{threads: 1   operations: 100000    ins: 5   rem: 5   cont: 90  range: 1000      impl: coarse_pth}     Time Elapsed (ms): 55.7082
+Options{threads: 1   operations: 100000    ins: 25  rem: 25  cont: 50  range: 1000      impl: coarse_pth}     Time Elapsed (ms): 61.5075
+Options{threads: 1   operations: 100000    ins: 45  rem: 45  cont: 10  range: 1000      impl: coarse_pth}     Time Elapsed (ms): 58.8099
+Options{threads: 2   operations: 100000    ins: 5   rem: 5   cont: 90  range: 1000      impl: coarse_pth}     Time Elapsed (ms): 142.832
+Options{threads: 2   operations: 100000    ins: 25  rem: 25  cont: 50  range: 1000      impl: coarse_pth}     Time Elapsed (ms): 168.584
+Options{threads: 2   operations: 100000    ins: 45  rem: 45  cont: 10  range: 1000      impl: coarse_pth}     Time Elapsed (ms): 166.603
+Options{threads: 4   operations: 100000    ins: 5   rem: 5   cont: 90  range: 1000      impl: coarse_pth}     Time Elapsed (ms): 207.425
+Options{threads: 4   operations: 100000    ins: 25  rem: 25  cont: 50  range: 1000      impl: coarse_pth}     Time Elapsed (ms): 235.522
+Options{threads: 4   operations: 100000    ins: 45  rem: 45  cont: 10  range: 1000      impl: coarse_pth}     Time Elapsed (ms): 258.853
+Options{threads: 8   operations: 100000    ins: 5   rem: 5   cont: 90  range: 1000      impl: coarse_pth}     Time Elapsed (ms): 258.608
+Options{threads: 8   operations: 100000    ins: 25  rem: 25  cont: 50  range: 1000      impl: coarse_pth}     Time Elapsed (ms): 282.011
+Options{threads: 8   operations: 100000    ins: 45  rem: 45  cont: 10  range: 1000      impl: coarse_pth}     Time Elapsed (ms): 297.195
+Options{threads: 16  operations: 100000    ins: 5   rem: 5   cont: 90  range: 1000      impl: coarse_pth}     Time Elapsed (ms): 357.26
+Options{threads: 16  operations: 100000    ins: 25  rem: 25  cont: 50  range: 1000      impl: coarse_pth}     Time Elapsed (ms): 351.73
+Options{threads: 16  operations: 100000    ins: 45  rem: 45  cont: 10  range: 1000      impl: coarse_pth}     Time Elapsed (ms): 357.081
+Options{threads: 32  operations: 100000    ins: 5   rem: 5   cont: 90  range: 1000      impl: coarse_pth}     Time Elapsed (ms): 520.661
+Options{threads: 32  operations: 100000    ins: 25  rem: 25  cont: 50  range: 1000      impl: coarse_pth}     Time Elapsed (ms): 522.619
+Options{threads: 32  operations: 100000    ins: 45  rem: 45  cont: 10  range: 1000      impl: coarse_pth}     Time Elapsed (ms): 486.457
+Options{threads: 1   operations: 100000    ins: 5   rem: 5   cont: 90  range: 10000     impl: coarse_pth}     Time Elapsed (ms): 634.23
+Options{threads: 1   operations: 100000    ins: 25  rem: 25  cont: 50  range: 10000     impl: coarse_pth}     Time Elapsed (ms): 1482.51
+Options{threads: 1   operations: 100000    ins: 45  rem: 45  cont: 10  range: 10000     impl: coarse_pth}     Time Elapsed (ms): 1636.86
+Options{threads: 2   operations: 100000    ins: 5   rem: 5   cont: 90  range: 10000     impl: coarse_pth}     Time Elapsed (ms): 745.387
+Options{threads: 2   operations: 100000    ins: 25  rem: 25  cont: 50  range: 10000     impl: coarse_pth}     Time Elapsed (ms): 1636.67
+Options{threads: 2   operations: 100000    ins: 45  rem: 45  cont: 10  range: 10000     impl: coarse_pth}     Time Elapsed (ms): 1806.8
+Options{threads: 4   operations: 100000    ins: 5   rem: 5   cont: 90  range: 10000     impl: coarse_pth}     Time Elapsed (ms): 861.373
+Options{threads: 4   operations: 100000    ins: 25  rem: 25  cont: 50  range: 10000     impl: coarse_pth}     Time Elapsed (ms): 1871.26
+Options{threads: 4   operations: 100000    ins: 45  rem: 45  cont: 10  range: 10000     impl: coarse_pth}     Time Elapsed (ms): 2116.57
+Options{threads: 8   operations: 100000    ins: 5   rem: 5   cont: 90  range: 10000     impl: coarse_pth}     Time Elapsed (ms): 1035.1
+Options{threads: 8   operations: 100000    ins: 25  rem: 25  cont: 50  range: 10000     impl: coarse_pth}     Time Elapsed (ms): 2026.45
+Options{threads: 8   operations: 100000    ins: 45  rem: 45  cont: 10  range: 10000     impl: coarse_pth}     Time Elapsed (ms): 2137.72
+Options{threads: 16  operations: 100000    ins: 5   rem: 5   cont: 90  range: 10000     impl: coarse_pth}     Time Elapsed (ms): 1387.1
+Options{threads: 16  operations: 100000    ins: 25  rem: 25  cont: 50  range: 10000     impl: coarse_pth}     Time Elapsed (ms): 2440.52
+Options{threads: 16  operations: 100000    ins: 45  rem: 45  cont: 10  range: 10000     impl: coarse_pth}     Time Elapsed (ms): 2591
+Options{threads: 32  operations: 100000    ins: 5   rem: 5   cont: 90  range: 10000     impl: coarse_pth}     Time Elapsed (ms): 1925.18
+Options{threads: 32  operations: 100000    ins: 25  rem: 25  cont: 50  range: 10000     impl: coarse_pth}     Time Elapsed (ms): 3372.36
+Options{threads: 32  operations: 100000    ins: 45  rem: 45  cont: 10  range: 10000     impl: coarse_pth}     Time Elapsed (ms): 3275.42
+Options{threads: 1   operations: 100000    ins: 5   rem: 5   cont: 90  range: 100000    impl: coarse_pth}     Time Elapsed (ms): 977.353
+Options{threads: 1   operations: 100000    ins: 25  rem: 25  cont: 50  range: 100000    impl: coarse_pth}     Time Elapsed (ms): 5195.61
+Options{threads: 1   operations: 100000    ins: 45  rem: 45  cont: 10  range: 100000    impl: coarse_pth}     Time Elapsed (ms): 8954.31
+Options{threads: 2   operations: 100000    ins: 5   rem: 5   cont: 90  range: 100000    impl: coarse_pth}     Time Elapsed (ms): 1088.08
+Options{threads: 2   operations: 100000    ins: 25  rem: 25  cont: 50  range: 100000    impl: coarse_pth}     Time Elapsed (ms): 5420.98
+Options{threads: 2   operations: 100000    ins: 45  rem: 45  cont: 10  range: 100000    impl: coarse_pth}     Time Elapsed (ms): 9573.33
+Options{threads: 4   operations: 100000    ins: 5   rem: 5   cont: 90  range: 100000    impl: coarse_pth}     Time Elapsed (ms): 1202.84
+Options{threads: 4   operations: 100000    ins: 25  rem: 25  cont: 50  range: 100000    impl: coarse_pth}     Time Elapsed (ms): 5696.51
+Options{threads: 4   operations: 100000    ins: 45  rem: 45  cont: 10  range: 100000    impl: coarse_pth}     Time Elapsed (ms): 9884.23
+Options{threads: 8   operations: 100000    ins: 5   rem: 5   cont: 90  range: 100000    impl: coarse_pth}     Time Elapsed (ms): 1439.21
+Options{threads: 8   operations: 100000    ins: 25  rem: 25  cont: 50  range: 100000    impl: coarse_pth}     Time Elapsed (ms): 5721.04
+Options{threads: 8   operations: 100000    ins: 45  rem: 45  cont: 10  range: 100000    impl: coarse_pth}     Time Elapsed (ms): 9523.13
+Options{threads: 16  operations: 100000    ins: 5   rem: 5   cont: 90  range: 100000    impl: coarse_pth}     Time Elapsed (ms): 1884.28
+Options{threads: 16  operations: 100000    ins: 25  rem: 25  cont: 50  range: 100000    impl: coarse_pth}     Time Elapsed (ms): 6792.17
+Options{threads: 16  operations: 100000    ins: 45  rem: 45  cont: 10  range: 100000    impl: coarse_pth}     Time Elapsed (ms): 10971.4
+Options{threads: 32  operations: 100000    ins: 5   rem: 5   cont: 90  range: 100000    impl: coarse_pth}     Time Elapsed (ms): 2699.44
+Options{threads: 32  operations: 100000    ins: 25  rem: 25  cont: 50  range: 100000    impl: coarse_pth}     Time Elapsed (ms): 9662.97
+Options{threads: 32  operations: 100000    ins: 45  rem: 45  cont: 10  range: 100000    impl: coarse_pth}     Time Elapsed (ms): 15270.5
+Options{threads: 1   operations: 100000    ins: 5   rem: 5   cont: 90  range: 100       impl: fine_pth  }     Time Elapsed (ms): 21.3936
+Options{threads: 1   operations: 100000    ins: 25  rem: 25  cont: 50  range: 100       impl: fine_pth  }     Time Elapsed (ms): 22.3228
+Options{threads: 1   operations: 100000    ins: 45  rem: 45  cont: 10  range: 100       impl: fine_pth  }     Time Elapsed (ms): 22.9759
+Options{threads: 2   operations: 100000    ins: 5   rem: 5   cont: 90  range: 100       impl: fine_pth  }     Time Elapsed (ms): 131.967
+Options{threads: 2   operations: 100000    ins: 25  rem: 25  cont: 50  range: 100       impl: fine_pth  }     Time Elapsed (ms): 131.698
+Options{threads: 2   operations: 100000    ins: 45  rem: 45  cont: 10  range: 100       impl: fine_pth  }     Time Elapsed (ms): 133.217
+Options{threads: 4   operations: 100000    ins: 5   rem: 5   cont: 90  range: 100       impl: fine_pth  }     Time Elapsed (ms): 386.345
+Options{threads: 4   operations: 100000    ins: 25  rem: 25  cont: 50  range: 100       impl: fine_pth  }     Time Elapsed (ms): 400.218
+Options{threads: 4   operations: 100000    ins: 45  rem: 45  cont: 10  range: 100       impl: fine_pth  }     Time Elapsed (ms): 401.456
+Options{threads: 8   operations: 100000    ins: 5   rem: 5   cont: 90  range: 100       impl: fine_pth  }     Time Elapsed (ms): 383.823
+Options{threads: 8   operations: 100000    ins: 25  rem: 25  cont: 50  range: 100       impl: fine_pth  }     Time Elapsed (ms): 388.247
+Options{threads: 8   operations: 100000    ins: 45  rem: 45  cont: 10  range: 100       impl: fine_pth  }     Time Elapsed (ms): 391.119
+Options{threads: 16  operations: 100000    ins: 5   rem: 5   cont: 90  range: 100       impl: fine_pth  }     Time Elapsed (ms): 377.674
+Options{threads: 16  operations: 100000    ins: 25  rem: 25  cont: 50  range: 100       impl: fine_pth  }     Time Elapsed (ms): 383.477
+Options{threads: 16  operations: 100000    ins: 45  rem: 45  cont: 10  range: 100       impl: fine_pth  }     Time Elapsed (ms): 385.292
+Options{threads: 32  operations: 100000    ins: 5   rem: 5   cont: 90  range: 100       impl: fine_pth  }     Time Elapsed (ms): 385.092
+Options{threads: 32  operations: 100000    ins: 25  rem: 25  cont: 50  range: 100       impl: fine_pth  }     Time Elapsed (ms): 375.669
+Options{threads: 32  operations: 100000    ins: 45  rem: 45  cont: 10  range: 100       impl: fine_pth  }     Time Elapsed (ms): 387.169
+Options{threads: 1   operations: 100000    ins: 5   rem: 5   cont: 90  range: 1000      impl: fine_pth  }     Time Elapsed (ms): 170.211
+Options{threads: 1   operations: 100000    ins: 25  rem: 25  cont: 50  range: 1000      impl: fine_pth  }     Time Elapsed (ms): 180.223
+Options{threads: 1   operations: 100000    ins: 45  rem: 45  cont: 10  range: 1000      impl: fine_pth  }     Time Elapsed (ms): 178.553
+Options{threads: 2   operations: 100000    ins: 5   rem: 5   cont: 90  range: 1000      impl: fine_pth  }     Time Elapsed (ms): 602.989
+Options{threads: 2   operations: 100000    ins: 25  rem: 25  cont: 50  range: 1000      impl: fine_pth  }     Time Elapsed (ms): 622.422
+Options{threads: 2   operations: 100000    ins: 45  rem: 45  cont: 10  range: 1000      impl: fine_pth  }     Time Elapsed (ms): 622.575
+Options{threads: 4   operations: 100000    ins: 5   rem: 5   cont: 90  range: 1000      impl: fine_pth  }     Time Elapsed (ms): 892.556
+Options{threads: 4   operations: 100000    ins: 25  rem: 25  cont: 50  range: 1000      impl: fine_pth  }     Time Elapsed (ms): 941.251
+Options{threads: 4   operations: 100000    ins: 45  rem: 45  cont: 10  range: 1000      impl: fine_pth  }     Time Elapsed (ms): 936.804
+Options{threads: 8   operations: 100000    ins: 5   rem: 5   cont: 90  range: 1000      impl: fine_pth  }     Time Elapsed (ms): 635.812
+Options{threads: 8   operations: 100000    ins: 25  rem: 25  cont: 50  range: 1000      impl: fine_pth  }     Time Elapsed (ms): 657.363
+Options{threads: 8   operations: 100000    ins: 45  rem: 45  cont: 10  range: 1000      impl: fine_pth  }     Time Elapsed (ms): 638.497
+Options{threads: 16  operations: 100000    ins: 5   rem: 5   cont: 90  range: 1000      impl: fine_pth  }     Time Elapsed (ms): 459.702
+Options{threads: 16  operations: 100000    ins: 25  rem: 25  cont: 50  range: 1000      impl: fine_pth  }     Time Elapsed (ms): 452.556
+Options{threads: 16  operations: 100000    ins: 45  rem: 45  cont: 10  range: 1000      impl: fine_pth  }     Time Elapsed (ms): 448.868
+Options{threads: 32  operations: 100000    ins: 5   rem: 5   cont: 90  range: 1000      impl: fine_pth  }     Time Elapsed (ms): 480.272
+Options{threads: 32  operations: 100000    ins: 25  rem: 25  cont: 50  range: 1000      impl: fine_pth  }     Time Elapsed (ms): 481.316
+Options{threads: 32  operations: 100000    ins: 45  rem: 45  cont: 10  range: 1000      impl: fine_pth  }     Time Elapsed (ms): 492.075
+Options{threads: 1   operations: 100000    ins: 5   rem: 5   cont: 90  range: 10000     impl: fine_pth  }     Time Elapsed (ms): 674.965
+Options{threads: 1   operations: 100000    ins: 25  rem: 25  cont: 50  range: 10000     impl: fine_pth  }     Time Elapsed (ms): 1463.29
+Options{threads: 1   operations: 100000    ins: 45  rem: 45  cont: 10  range: 10000     impl: fine_pth  }     Time Elapsed (ms): 1622.7
+Options{threads: 2   operations: 100000    ins: 5   rem: 5   cont: 90  range: 10000     impl: fine_pth  }     Time Elapsed (ms): 3335.6
+Options{threads: 2   operations: 100000    ins: 25  rem: 25  cont: 50  range: 10000     impl: fine_pth  }     Time Elapsed (ms): 4924.38
+Options{threads: 2   operations: 100000    ins: 45  rem: 45  cont: 10  range: 10000     impl: fine_pth  }     Time Elapsed (ms): 5451.4
+Options{threads: 4   operations: 100000    ins: 5   rem: 5   cont: 90  range: 10000     impl: fine_pth  }     Time Elapsed (ms): 3456.36
+Options{threads: 4   operations: 100000    ins: 25  rem: 25  cont: 50  range: 10000     impl: fine_pth  }     Time Elapsed (ms): 7431.23
+Options{threads: 4   operations: 100000    ins: 45  rem: 45  cont: 10  range: 10000     impl: fine_pth  }     Time Elapsed (ms): 8186.62
+Options{threads: 8   operations: 100000    ins: 5   rem: 5   cont: 90  range: 10000     impl: fine_pth  }     Time Elapsed (ms): 2250.65
+Options{threads: 8   operations: 100000    ins: 25  rem: 25  cont: 50  range: 10000     impl: fine_pth  }     Time Elapsed (ms): 4852.92
+Options{threads: 8   operations: 100000    ins: 45  rem: 45  cont: 10  range: 10000     impl: fine_pth  }     Time Elapsed (ms): 5359.45
+Options{threads: 16  operations: 100000    ins: 5   rem: 5   cont: 90  range: 10000     impl: fine_pth  }     Time Elapsed (ms): 1145.83
+Options{threads: 16  operations: 100000    ins: 25  rem: 25  cont: 50  range: 10000     impl: fine_pth  }     Time Elapsed (ms): 2397.42
+Options{threads: 16  operations: 100000    ins: 45  rem: 45  cont: 10  range: 10000     impl: fine_pth  }     Time Elapsed (ms): 2685.76
+Options{threads: 32  operations: 100000    ins: 5   rem: 5   cont: 90  range: 10000     impl: fine_pth  }     Time Elapsed (ms): 661.134
+Options{threads: 32  operations: 100000    ins: 25  rem: 25  cont: 50  range: 10000     impl: fine_pth  }     Time Elapsed (ms): 1270.43
+Options{threads: 32  operations: 100000    ins: 45  rem: 45  cont: 10  range: 10000     impl: fine_pth  }     Time Elapsed (ms): 1414.26
+Options{threads: 1   operations: 100000    ins: 5   rem: 5   cont: 90  range: 100000    impl: fine_pth  }     Time Elapsed (ms): 867.112
+Options{threads: 1   operations: 100000    ins: 25  rem: 25  cont: 50  range: 100000    impl: fine_pth  }     Time Elapsed (ms): 5083.46
+Options{threads: 1   operations: 100000    ins: 45  rem: 45  cont: 10  range: 100000    impl: fine_pth  }     Time Elapsed (ms): 11670.2
+Options{threads: 2   operations: 100000    ins: 5   rem: 5   cont: 90  range: 100000    impl: fine_pth  }     Time Elapsed (ms): 3048.94
+Options{threads: 2   operations: 100000    ins: 25  rem: 25  cont: 50  range: 100000    impl: fine_pth  }     Time Elapsed (ms): 13467.1
+Options{threads: 2   operations: 100000    ins: 45  rem: 45  cont: 10  range: 100000    impl: fine_pth  }     Time Elapsed (ms): 20835.7
+Options{threads: 4   operations: 100000    ins: 5   rem: 5   cont: 90  range: 100000    impl: fine_pth  }     Time Elapsed (ms): 4531.15
+Options{threads: 4   operations: 100000    ins: 25  rem: 25  cont: 50  range: 100000    impl: fine_pth  }     Time Elapsed (ms): 18478.1
+Options{threads: 4   operations: 100000    ins: 45  rem: 45  cont: 10  range: 100000    impl: fine_pth  }     Time Elapsed (ms): 30810.5
+Options{threads: 8   operations: 100000    ins: 5   rem: 5   cont: 90  range: 100000    impl: fine_pth  }     Time Elapsed (ms): 2922.76
+Options{threads: 8   operations: 100000    ins: 25  rem: 25  cont: 50  range: 100000    impl: fine_pth  }     Time Elapsed (ms): 12617
+Options{threads: 8   operations: 100000    ins: 45  rem: 45  cont: 10  range: 100000    impl: fine_pth  }     Time Elapsed (ms): 19229.4
+Options{threads: 16  operations: 100000    ins: 5   rem: 5   cont: 90  range: 100000    impl: fine_pth  }     Time Elapsed (ms): 1459.56
+Options{threads: 16  operations: 100000    ins: 25  rem: 25  cont: 50  range: 100000    impl: fine_pth  }     Time Elapsed (ms): 6264.17
+Options{threads: 16  operations: 100000    ins: 45  rem: 45  cont: 10  range: 100000    impl: fine_pth  }     Time Elapsed (ms): 9740.29
+Options{threads: 32  operations: 100000    ins: 5   rem: 5   cont: 90  range: 100000    impl: fine_pth  }     Time Elapsed (ms): 838.198
+Options{threads: 32  operations: 100000    ins: 25  rem: 25  cont: 50  range: 100000    impl: fine_pth  }     Time Elapsed (ms): 3265.11
+Options{threads: 32  operations: 100000    ins: 45  rem: 45  cont: 10  range: 100000    impl: fine_pth  }     Time Elapsed (ms): 5190.66
+Options{threads: 1   operations: 100000    ins: 5   rem: 5   cont: 90  range: 100       impl: coarse_omp}     Time Elapsed (ms): 6.09438
+Options{threads: 1   operations: 100000    ins: 25  rem: 25  cont: 50  range: 100       impl: coarse_omp}     Time Elapsed (ms): 7.27744
+Options{threads: 1   operations: 100000    ins: 45  rem: 45  cont: 10  range: 100       impl: coarse_omp}     Time Elapsed (ms): 7.56176
+Options{threads: 2   operations: 100000    ins: 5   rem: 5   cont: 90  range: 100       impl: coarse_omp}     Time Elapsed (ms): 13.1798
+Options{threads: 2   operations: 100000    ins: 25  rem: 25  cont: 50  range: 100       impl: coarse_omp}     Time Elapsed (ms): 14.9979
+Options{threads: 2   operations: 100000    ins: 45  rem: 45  cont: 10  range: 100       impl: coarse_omp}     Time Elapsed (ms): 19.6715
+Options{threads: 4   operations: 100000    ins: 5   rem: 5   cont: 90  range: 100       impl: coarse_omp}     Time Elapsed (ms): 60.1531
+Options{threads: 4   operations: 100000    ins: 25  rem: 25  cont: 50  range: 100       impl: coarse_omp}     Time Elapsed (ms): 68.7069
+Options{threads: 4   operations: 100000    ins: 45  rem: 45  cont: 10  range: 100       impl: coarse_omp}     Time Elapsed (ms): 89.1769
+Options{threads: 8   operations: 100000    ins: 5   rem: 5   cont: 90  range: 100       impl: coarse_omp}     Time Elapsed (ms): 79.7197
+Options{threads: 8   operations: 100000    ins: 25  rem: 25  cont: 50  range: 100       impl: coarse_omp}     Time Elapsed (ms): 98.7868
+Options{threads: 8   operations: 100000    ins: 45  rem: 45  cont: 10  range: 100       impl: coarse_omp}     Time Elapsed (ms): 73.6931
+Options{threads: 16  operations: 100000    ins: 5   rem: 5   cont: 90  range: 100       impl: coarse_omp}     Time Elapsed (ms): 83.3095
+Options{threads: 16  operations: 100000    ins: 25  rem: 25  cont: 50  range: 100       impl: coarse_omp}     Time Elapsed (ms): 98.8844
+Options{threads: 16  operations: 100000    ins: 45  rem: 45  cont: 10  range: 100       impl: coarse_omp}     Time Elapsed (ms): 84.5916
+Options{threads: 32  operations: 100000    ins: 5   rem: 5   cont: 90  range: 100       impl: coarse_omp}     Time Elapsed (ms): 110.087
+Options{threads: 32  operations: 100000    ins: 25  rem: 25  cont: 50  range: 100       impl: coarse_omp}     Time Elapsed (ms): 109.125
+Options{threads: 32  operations: 100000    ins: 45  rem: 45  cont: 10  range: 100       impl: coarse_omp}     Time Elapsed (ms): 80.842
+Options{threads: 1   operations: 100000    ins: 5   rem: 5   cont: 90  range: 1000      impl: coarse_omp}     Time Elapsed (ms): 54.2949
+Options{threads: 1   operations: 100000    ins: 25  rem: 25  cont: 50  range: 1000      impl: coarse_omp}     Time Elapsed (ms): 60.6918
+Options{threads: 1   operations: 100000    ins: 45  rem: 45  cont: 10  range: 1000      impl: coarse_omp}     Time Elapsed (ms): 58.0411
+Options{threads: 2   operations: 100000    ins: 5   rem: 5   cont: 90  range: 1000      impl: coarse_omp}     Time Elapsed (ms): 60.7726
+Options{threads: 2   operations: 100000    ins: 25  rem: 25  cont: 50  range: 1000      impl: coarse_omp}     Time Elapsed (ms): 69.7509
+Options{threads: 2   operations: 100000    ins: 45  rem: 45  cont: 10  range: 1000      impl: coarse_omp}     Time Elapsed (ms): 61.6271
+Options{threads: 4   operations: 100000    ins: 5   rem: 5   cont: 90  range: 1000      impl: coarse_omp}     Time Elapsed (ms): 673.474
+Options{threads: 4   operations: 100000    ins: 25  rem: 25  cont: 50  range: 1000      impl: coarse_omp}     Time Elapsed (ms): 544.701
+Options{threads: 4   operations: 100000    ins: 45  rem: 45  cont: 10  range: 1000      impl: coarse_omp}     Time Elapsed (ms): 482.176
+Options{threads: 8   operations: 100000    ins: 5   rem: 5   cont: 90  range: 1000      impl: coarse_omp}     Time Elapsed (ms): 449.819
+Options{threads: 8   operations: 100000    ins: 25  rem: 25  cont: 50  range: 1000      impl: coarse_omp}     Time Elapsed (ms): 454.357
+Options{threads: 8   operations: 100000    ins: 45  rem: 45  cont: 10  range: 1000      impl: coarse_omp}     Time Elapsed (ms): 354.873
+Options{threads: 16  operations: 100000    ins: 5   rem: 5   cont: 90  range: 1000      impl: coarse_omp}     Time Elapsed (ms): 296.133
+Options{threads: 16  operations: 100000    ins: 25  rem: 25  cont: 50  range: 1000      impl: coarse_omp}     Time Elapsed (ms): 265.538
+Options{threads: 16  operations: 100000    ins: 45  rem: 45  cont: 10  range: 1000      impl: coarse_omp}     Time Elapsed (ms): 286.726
+Options{threads: 32  operations: 100000    ins: 5   rem: 5   cont: 90  range: 1000      impl: coarse_omp}     Time Elapsed (ms): 357.414
+Options{threads: 32  operations: 100000    ins: 25  rem: 25  cont: 50  range: 1000      impl: coarse_omp}     Time Elapsed (ms): 323.779
+Options{threads: 32  operations: 100000    ins: 45  rem: 45  cont: 10  range: 1000      impl: coarse_omp}     Time Elapsed (ms): 292.793
+Options{threads: 1   operations: 100000    ins: 5   rem: 5   cont: 90  range: 10000     impl: coarse_omp}     Time Elapsed (ms): 632.809
+Options{threads: 1   operations: 100000    ins: 25  rem: 25  cont: 50  range: 10000     impl: coarse_omp}     Time Elapsed (ms): 1481.61
+Options{threads: 1   operations: 100000    ins: 45  rem: 45  cont: 10  range: 10000     impl: coarse_omp}     Time Elapsed (ms): 1637.18
+Options{threads: 2   operations: 100000    ins: 5   rem: 5   cont: 90  range: 10000     impl: coarse_omp}     Time Elapsed (ms): 630.126
+Options{threads: 2   operations: 100000    ins: 25  rem: 25  cont: 50  range: 10000     impl: coarse_omp}     Time Elapsed (ms): 1491.98
+Options{threads: 2   operations: 100000    ins: 45  rem: 45  cont: 10  range: 10000     impl: coarse_omp}     Time Elapsed (ms): 1654.81
+Options{threads: 4   operations: 100000    ins: 5   rem: 5   cont: 90  range: 10000     impl: coarse_omp}     Time Elapsed (ms): 1351.72
+Options{threads: 4   operations: 100000    ins: 25  rem: 25  cont: 50  range: 10000     impl: coarse_omp}     Time Elapsed (ms): 2348.05
+Options{threads: 4   operations: 100000    ins: 45  rem: 45  cont: 10  range: 10000     impl: coarse_omp}     Time Elapsed (ms): 2300.45
+Options{threads: 8   operations: 100000    ins: 5   rem: 5   cont: 90  range: 10000     impl: coarse_omp}     Time Elapsed (ms): 1376.46
+Options{threads: 8   operations: 100000    ins: 25  rem: 25  cont: 50  range: 10000     impl: coarse_omp}     Time Elapsed (ms): 2212.25
+Options{threads: 8   operations: 100000    ins: 45  rem: 45  cont: 10  range: 10000     impl: coarse_omp}     Time Elapsed (ms): 2112.96
+Options{threads: 16  operations: 100000    ins: 5   rem: 5   cont: 90  range: 10000     impl: coarse_omp}     Time Elapsed (ms): 1207.85
+Options{threads: 16  operations: 100000    ins: 25  rem: 25  cont: 50  range: 10000     impl: coarse_omp}     Time Elapsed (ms): 2364.88
+Options{threads: 16  operations: 100000    ins: 45  rem: 45  cont: 10  range: 10000     impl: coarse_omp}     Time Elapsed (ms): 2478.17
+Options{threads: 32  operations: 100000    ins: 5   rem: 5   cont: 90  range: 10000     impl: coarse_omp}     Time Elapsed (ms): 1711.78
+Options{threads: 32  operations: 100000    ins: 25  rem: 25  cont: 50  range: 10000     impl: coarse_omp}     Time Elapsed (ms): 3293.74
+Options{threads: 32  operations: 100000    ins: 45  rem: 45  cont: 10  range: 10000     impl: coarse_omp}     Time Elapsed (ms): 3571.4
+Options{threads: 1   operations: 100000    ins: 5   rem: 5   cont: 90  range: 100000    impl: coarse_omp}     Time Elapsed (ms): 976.124
+Options{threads: 1   operations: 100000    ins: 25  rem: 25  cont: 50  range: 100000    impl: coarse_omp}     Time Elapsed (ms): 5170.25
+Options{threads: 1   operations: 100000    ins: 45  rem: 45  cont: 10  range: 100000    impl: coarse_omp}     Time Elapsed (ms): 8887.69
+Options{threads: 2   operations: 100000    ins: 5   rem: 5   cont: 90  range: 100000    impl: coarse_omp}     Time Elapsed (ms): 977
+Options{threads: 2   operations: 100000    ins: 25  rem: 25  cont: 50  range: 100000    impl: coarse_omp}     Time Elapsed (ms): 5177.86
+Options{threads: 2   operations: 100000    ins: 45  rem: 45  cont: 10  range: 100000    impl: coarse_omp}     Time Elapsed (ms): 9346.6
+Options{threads: 4   operations: 100000    ins: 5   rem: 5   cont: 90  range: 100000    impl: coarse_omp}     Time Elapsed (ms): 2104.49
+Options{threads: 4   operations: 100000    ins: 25  rem: 25  cont: 50  range: 100000    impl: coarse_omp}     Time Elapsed (ms): 6179.3
+Options{threads: 4   operations: 100000    ins: 45  rem: 45  cont: 10  range: 100000    impl: coarse_omp}     Time Elapsed (ms): 9853.75
+Options{threads: 8   operations: 100000    ins: 5   rem: 5   cont: 90  range: 100000    impl: coarse_omp}     Time Elapsed (ms): 1795.03
+Options{threads: 8   operations: 100000    ins: 25  rem: 25  cont: 50  range: 100000    impl: coarse_omp}     Time Elapsed (ms): 5942.67
+Options{threads: 8   operations: 100000    ins: 45  rem: 45  cont: 10  range: 100000    impl: coarse_omp}     Time Elapsed (ms): 9994.32
+Options{threads: 16  operations: 100000    ins: 5   rem: 5   cont: 90  range: 100000    impl: coarse_omp}     Time Elapsed (ms): 1811.16
+Options{threads: 16  operations: 100000    ins: 25  rem: 25  cont: 50  range: 100000    impl: coarse_omp}     Time Elapsed (ms): 7051.17
+Options{threads: 16  operations: 100000    ins: 45  rem: 45  cont: 10  range: 100000    impl: coarse_omp}     Time Elapsed (ms): 11239.1
+Options{threads: 32  operations: 100000    ins: 5   rem: 5   cont: 90  range: 100000    impl: coarse_omp}     Time Elapsed (ms): 2568.34
+Options{threads: 32  operations: 100000    ins: 25  rem: 25  cont: 50  range: 100000    impl: coarse_omp}     Time Elapsed (ms): 10061.8
+Options{threads: 32  operations: 100000    ins: 45  rem: 45  cont: 10  range: 100000    impl: coarse_omp}     Time Elapsed (ms): 15225.4
+Options{threads: 1   operations: 100000    ins: 5   rem: 5   cont: 90  range: 100       impl: fine_omp  }     Time Elapsed (ms): 35.7614
+Options{threads: 1   operations: 100000    ins: 25  rem: 25  cont: 50  range: 100       impl: fine_omp  }     Time Elapsed (ms): 35.6397
+Options{threads: 1   operations: 100000    ins: 45  rem: 45  cont: 10  range: 100       impl: fine_omp  }     Time Elapsed (ms): 35.7692
+Options{threads: 2   operations: 100000    ins: 5   rem: 5   cont: 90  range: 100       impl: fine_omp  }     Time Elapsed (ms): 82.2588
+Options{threads: 2   operations: 100000    ins: 25  rem: 25  cont: 50  range: 100       impl: fine_omp  }     Time Elapsed (ms): 83.7568
+Options{threads: 2   operations: 100000    ins: 45  rem: 45  cont: 10  range: 100       impl: fine_omp  }     Time Elapsed (ms): 85.5943
+Options{threads: 4   operations: 100000    ins: 5   rem: 5   cont: 90  range: 100       impl: fine_omp  }     Time Elapsed (ms): 146.754
+Options{threads: 4   operations: 100000    ins: 25  rem: 25  cont: 50  range: 100       impl: fine_omp  }     Time Elapsed (ms): 160.914
+Options{threads: 4   operations: 100000    ins: 45  rem: 45  cont: 10  range: 100       impl: fine_omp  }     Time Elapsed (ms): 168.291
+Options{threads: 8   operations: 100000    ins: 5   rem: 5   cont: 90  range: 100       impl: fine_omp  }     Time Elapsed (ms): 127.085
+Options{threads: 8   operations: 100000    ins: 25  rem: 25  cont: 50  range: 100       impl: fine_omp  }     Time Elapsed (ms): 133.955
+Options{threads: 8   operations: 100000    ins: 45  rem: 45  cont: 10  range: 100       impl: fine_omp  }     Time Elapsed (ms): 138.436
+Options{threads: 16  operations: 100000    ins: 5   rem: 5   cont: 90  range: 100       impl: fine_omp  }     Time Elapsed (ms): 125.886
+Options{threads: 16  operations: 100000    ins: 25  rem: 25  cont: 50  range: 100       impl: fine_omp  }     Time Elapsed (ms): 133.798
+Options{threads: 16  operations: 100000    ins: 45  rem: 45  cont: 10  range: 100       impl: fine_omp  }     Time Elapsed (ms): 129.893
+Options{threads: 32  operations: 100000    ins: 5   rem: 5   cont: 90  range: 100       impl: fine_omp  }     Time Elapsed (ms): 177.786
+Options{threads: 32  operations: 100000    ins: 25  rem: 25  cont: 50  range: 100       impl: fine_omp  }     Time Elapsed (ms): 161.931
+Options{threads: 32  operations: 100000    ins: 45  rem: 45  cont: 10  range: 100       impl: fine_omp  }     Time Elapsed (ms): 170.865
+Options{threads: 1   operations: 100000    ins: 5   rem: 5   cont: 90  range: 1000      impl: fine_omp  }     Time Elapsed (ms): 304.579
+Options{threads: 1   operations: 100000    ins: 25  rem: 25  cont: 50  range: 1000      impl: fine_omp  }     Time Elapsed (ms): 319.653
+Options{threads: 1   operations: 100000    ins: 45  rem: 45  cont: 10  range: 1000      impl: fine_omp  }     Time Elapsed (ms): 314.865
+Options{threads: 2   operations: 100000    ins: 5   rem: 5   cont: 90  range: 1000      impl: fine_omp  }     Time Elapsed (ms): 497.027
+Options{threads: 2   operations: 100000    ins: 25  rem: 25  cont: 50  range: 1000      impl: fine_omp  }     Time Elapsed (ms): 536.407
+Options{threads: 2   operations: 100000    ins: 45  rem: 45  cont: 10  range: 1000      impl: fine_omp  }     Time Elapsed (ms): 549.639
+Options{threads: 4   operations: 100000    ins: 5   rem: 5   cont: 90  range: 1000      impl: fine_omp  }     Time Elapsed (ms): 775.952
+Options{threads: 4   operations: 100000    ins: 25  rem: 25  cont: 50  range: 1000      impl: fine_omp  }     Time Elapsed (ms): 841.743
+Options{threads: 4   operations: 100000    ins: 45  rem: 45  cont: 10  range: 1000      impl: fine_omp  }     Time Elapsed (ms): 858.966
+Options{threads: 8   operations: 100000    ins: 5   rem: 5   cont: 90  range: 1000      impl: fine_omp  }     Time Elapsed (ms): 459.724
+Options{threads: 8   operations: 100000    ins: 25  rem: 25  cont: 50  range: 1000      impl: fine_omp  }     Time Elapsed (ms): 478.092
+Options{threads: 8   operations: 100000    ins: 45  rem: 45  cont: 10  range: 1000      impl: fine_omp  }     Time Elapsed (ms): 489.664
+Options{threads: 16  operations: 100000    ins: 5   rem: 5   cont: 90  range: 1000      impl: fine_omp  }     Time Elapsed (ms): 281.75
+Options{threads: 16  operations: 100000    ins: 25  rem: 25  cont: 50  range: 1000      impl: fine_omp  }     Time Elapsed (ms): 283.263
+Options{threads: 16  operations: 100000    ins: 45  rem: 45  cont: 10  range: 1000      impl: fine_omp  }     Time Elapsed (ms): 291.941
+Options{threads: 32  operations: 100000    ins: 5   rem: 5   cont: 90  range: 1000      impl: fine_omp  }     Time Elapsed (ms): 201.779
+Options{threads: 32  operations: 100000    ins: 25  rem: 25  cont: 50  range: 1000      impl: fine_omp  }     Time Elapsed (ms): 199.187
+Options{threads: 32  operations: 100000    ins: 45  rem: 45  cont: 10  range: 1000      impl: fine_omp  }     Time Elapsed (ms): 190.762
+Options{threads: 1   operations: 100000    ins: 5   rem: 5   cont: 90  range: 10000     impl: fine_omp  }     Time Elapsed (ms): 1200.74
+Options{threads: 1   operations: 100000    ins: 25  rem: 25  cont: 50  range: 10000     impl: fine_omp  }     Time Elapsed (ms): 2596.99
+Options{threads: 1   operations: 100000    ins: 45  rem: 45  cont: 10  range: 10000     impl: fine_omp  }     Time Elapsed (ms): 2926.34
+Options{threads: 2   operations: 100000    ins: 5   rem: 5   cont: 90  range: 10000     impl: fine_omp  }     Time Elapsed (ms): 1842.32
+Options{threads: 2   operations: 100000    ins: 25  rem: 25  cont: 50  range: 10000     impl: fine_omp  }     Time Elapsed (ms): 4456.01
+Options{threads: 2   operations: 100000    ins: 45  rem: 45  cont: 10  range: 10000     impl: fine_omp  }     Time Elapsed (ms): 4989.24
+Options{threads: 4   operations: 100000    ins: 5   rem: 5   cont: 90  range: 10000     impl: fine_omp  }     Time Elapsed (ms): 2949.85
+Options{threads: 4   operations: 100000    ins: 25  rem: 25  cont: 50  range: 10000     impl: fine_omp  }     Time Elapsed (ms): 6438.26
+Options{threads: 4   operations: 100000    ins: 45  rem: 45  cont: 10  range: 10000     impl: fine_omp  }     Time Elapsed (ms): 7396.86
+Options{threads: 8   operations: 100000    ins: 5   rem: 5   cont: 90  range: 10000     impl: fine_omp  }     Time Elapsed (ms): 1669.51
+Options{threads: 8   operations: 100000    ins: 25  rem: 25  cont: 50  range: 10000     impl: fine_omp  }     Time Elapsed (ms): 3386.93
+Options{threads: 8   operations: 100000    ins: 45  rem: 45  cont: 10  range: 10000     impl: fine_omp  }     Time Elapsed (ms): 3901.1
+Options{threads: 16  operations: 100000    ins: 5   rem: 5   cont: 90  range: 10000     impl: fine_omp  }     Time Elapsed (ms): 891.766
+Options{threads: 16  operations: 100000    ins: 25  rem: 25  cont: 50  range: 10000     impl: fine_omp  }     Time Elapsed (ms): 1739.34
+Options{threads: 16  operations: 100000    ins: 45  rem: 45  cont: 10  range: 10000     impl: fine_omp  }     Time Elapsed (ms): 2006.9
+Options{threads: 32  operations: 100000    ins: 5   rem: 5   cont: 90  range: 10000     impl: fine_omp  }     Time Elapsed (ms): 513.321
+Options{threads: 32  operations: 100000    ins: 25  rem: 25  cont: 50  range: 10000     impl: fine_omp  }     Time Elapsed (ms): 939.521
+Options{threads: 32  operations: 100000    ins: 45  rem: 45  cont: 10  range: 10000     impl: fine_omp  }     Time Elapsed (ms): 1056.61
+Options{threads: 1   operations: 100000    ins: 5   rem: 5   cont: 90  range: 100000    impl: fine_omp  }     Time Elapsed (ms): 1539.26
+Options{threads: 1   operations: 100000    ins: 25  rem: 25  cont: 50  range: 100000    impl: fine_omp  }     Time Elapsed (ms): 7047.97
+Options{threads: 1   operations: 100000    ins: 45  rem: 45  cont: 10  range: 100000    impl: fine_omp  }     Time Elapsed (ms): 11959.6
+Options{threads: 2   operations: 100000    ins: 5   rem: 5   cont: 90  range: 100000    impl: fine_omp  }     Time Elapsed (ms): 2430.33
+Options{threads: 2   operations: 100000    ins: 25  rem: 25  cont: 50  range: 100000    impl: fine_omp  }     Time Elapsed (ms): 11466.9
+Options{threads: 2   operations: 100000    ins: 45  rem: 45  cont: 10  range: 100000    impl: fine_omp  }     Time Elapsed (ms): 19152.3
+Options{threads: 4   operations: 100000    ins: 5   rem: 5   cont: 90  range: 100000    impl: fine_omp  }     Time Elapsed (ms): 3865.9
+Options{threads: 4   operations: 100000    ins: 25  rem: 25  cont: 50  range: 100000    impl: fine_omp  }     Time Elapsed (ms): 16377.4
+Options{threads: 4   operations: 100000    ins: 45  rem: 45  cont: 10  range: 100000    impl: fine_omp  }     Time Elapsed (ms): 26177.8
+Options{threads: 8   operations: 100000    ins: 5   rem: 5   cont: 90  range: 100000    impl: fine_omp  }     Time Elapsed (ms): 2116.44
+Options{threads: 8   operations: 100000    ins: 25  rem: 25  cont: 50  range: 100000    impl: fine_omp  }     Time Elapsed (ms): 8984.6
+Options{threads: 8   operations: 100000    ins: 45  rem: 45  cont: 10  range: 100000    impl: fine_omp  }     Time Elapsed (ms): 14186.6
+Options{threads: 16  operations: 100000    ins: 5   rem: 5   cont: 90  range: 100000    impl: fine_omp  }     Time Elapsed (ms): 1117.64
+Options{threads: 16  operations: 100000    ins: 25  rem: 25  cont: 50  range: 100000    impl: fine_omp  }     Time Elapsed (ms): 4591.03
+Options{threads: 16  operations: 100000    ins: 45  rem: 45  cont: 10  range: 100000    impl: fine_omp  }     Time Elapsed (ms): 7498.33
+Options{threads: 32  operations: 100000    ins: 5   rem: 5   cont: 90  range: 100000    impl: fine_omp  }     Time Elapsed (ms): 627.779
+Options{threads: 32  operations: 100000    ins: 25  rem: 25  cont: 50  range: 100000    impl: fine_omp  }     Time Elapsed (ms): 2441.81
+Options{threads: 32  operations: 100000    ins: 45  rem: 45  cont: 10  range: 100000    impl: fine_omp  }     Time Elapsed (ms): 4038.57
+
+=== Done ===
+Tue Nov  3 02:40:39 PM EST 2026
